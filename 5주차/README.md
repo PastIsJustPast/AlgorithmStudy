@@ -3,4 +3,4 @@
 | 난이도 | 유형 | 번호 | 문제 이름 |
 |:------:|:----:|:----:|:---------:|
 | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/13.svg"/> | DP | [1082](https://www.acmicpc.net/problem/1082) | [방 번호](https://www.acmicpc.net/problem/1082) |
-| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/13.svg"/> | 이분탐색 | [1253](https://www.acmicpc.net/problem/1253) | [좋다](https://www.acmicpc.net/problem/1253) |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/12.svg"/> | 이분탐색 | [1253](https://www.acmicpc.net/problem/1253) | [좋다](https://www.acmicpc.net/problem/1253) |
