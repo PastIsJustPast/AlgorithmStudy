@@ -1,6 +1,3 @@
-import sys
-sys.stdin = open('sample.txt')
-
 C, N = map(int, input().split())
 cost2client = {}
 for _ in range(N):

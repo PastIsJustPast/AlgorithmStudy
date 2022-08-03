@@ -1,7 +1,3 @@
-import sys
-sys.stdin = open('sample.txt')
-
-
 N, M, L, K = map(int, input().split())
 
 points = []
