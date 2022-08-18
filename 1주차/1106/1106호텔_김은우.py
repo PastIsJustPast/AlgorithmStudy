@@ -11,3 +11,4 @@ for cost, cust in info:
         dp[i] = min(dp[i], dp[max(0, i-cust)]+cost)
 
 print(dp[c])
+print(1)
