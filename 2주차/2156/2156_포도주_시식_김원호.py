@@ -1,3 +1,6 @@
+# python3 31860 KB, 464 ms
+# pypy3 116872 KB, 144 ms
+
 n = int(input())
 wines = [int(input()) for _ in range(n)]
 dp = [[0] * 3 for _ in range(n)]

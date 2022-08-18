@@ -1,3 +1,7 @@
+# python3 30840 KB 996 ms
+# pypy3 116404 KB, 196 ms
+
+
 def get_max_fuel_idx(stations, dist_limit):
     max_idx = -1
     max_fuel = -1

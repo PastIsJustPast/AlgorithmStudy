@@ -1,3 +1,6 @@
+# python3 153628 KB, 3032 ms
+# pypy3 251552 KB, 600 ms
+
 from collections import deque
 
 M, N = map(int, input().split())

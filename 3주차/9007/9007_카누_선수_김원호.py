@@ -1,3 +1,5 @@
+# pypy3 352880 KB, 7604 ms
+
 def binary_search(arr, n):
     start = 0
     end = len(arr) - 1
