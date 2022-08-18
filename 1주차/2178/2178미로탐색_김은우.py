@@ -1,9 +1,9 @@
 #s1_q2178.py
 from collections import deque
 n, m = map(int, input().split())
-maps = [list(map(int, input())) for _ in range(n)]
-dist = [[0 for _ in range(m)] for _ in range(n)]
-dist[0][0] = 1
+maps = [list(map(int, input())) for _ in range(n)]  # 지도
+dist = [[0 for _ in range(m)] for _ in range(n)]    # 거리&방문 여부
+dist[0][0] = 1  #시작지점 방문처리
 
 dx = [-1, 0, 1, 0]
 dy = [0, 1, 0, -1]
