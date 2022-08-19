@@ -1,3 +1,5 @@
+#kb     ms      lang
+#32908	88  	Python 3
 import heapq, sys
 input = sys.stdin.readline
 n = int(input())

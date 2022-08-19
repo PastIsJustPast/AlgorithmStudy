@@ -1,3 +1,7 @@
+#kb     ms      lang
+#97968	2072	Python 3
+#159240	468	    PyPy3 
+
 #s1_q7576.py
 import sys
 from collections import deque

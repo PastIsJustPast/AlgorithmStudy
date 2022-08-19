@@ -1,3 +1,7 @@
+#kb     ms  lang
+#30840	76	Python 3
+import sys
+input = sys.stdin.readline
 n = int(input())
 
 arr = [0] + [int(input()) for _ in range(n)]
