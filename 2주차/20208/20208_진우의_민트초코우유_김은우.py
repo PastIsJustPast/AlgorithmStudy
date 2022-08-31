@@ -32,7 +32,9 @@ for perm in list(permutations(mints, len(mints))):
             m += h          # 민트초코를 먹고 h만큼 회복
     MAX = max(MAX, cnt)
 print(MAX)
+
 '''
+
 import sys
 input = sys.stdin.readline
 
