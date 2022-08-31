@@ -33,36 +33,40 @@ for perm in list(permutations(mints, len(mints))):
     MAX = max(MAX, cnt)
 print(MAX)
 '''
-from collections import deque
-from copy import copy
+import sys
+input = sys.stdin.readline
 
-def bfs(q, v):
-    x, y = q.popleft()
+def dfs(x, y):
+    global MAX, visited, m, h, mints, hx, hy, c, visited_cnt
     
-    
+    for i in range(c) :
+        nx, ny = mints[i]
+        cost = abs(x-nx) + abs(y-ny)
+        
+        if not visited[i] and m >= cost:    
+            visited[i]  = 1
+            visited_cnt += 1
+            m -= cost - h
+            dfs(nx, ny)
+            m += cost - h
+            visited_cnt -= 1
+            visited[i] = 0
+        elif m >= abs(x-hx) + abs(y-hy):
+            MAX = max(MAX, visited_cnt)
 
-n, M, h = map(int, input().split())
-
-dx = [-1, 1, 0, 0]
-dy = [0, 0, -1, 1]
-
+n, m, h = map(int, input().split())
 maps = [list(map(int, input().split())) for _ in range(n)]
-visited = [[0 for _ in range(n)] for _ in range(n)]
-
+visited_cnt = 0
 mints = []
 for i in range(n):
     for j in range(n):
         if maps[i][j] == 2:
             mints.append((i, j))
         elif maps[i][j] == 1:
-            home = (i, j)
+            hx, hy = i, j
+c = len(mints)
+visited = [0 for _ in range(c)]
 
 MAX = 0
-
-q = deque((home))
-print(q)
-x = [1,2,3,4]
-bfs(q, copy(x))
-print(x)
-
+dfs(hx, hy)
 print(MAX)
