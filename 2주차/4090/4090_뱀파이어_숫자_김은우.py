@@ -1,3 +1,4 @@
+#미완료
 from itertools import permutations
 import sys
 input = sys.stdin.readline
