@@ -1,4 +1,7 @@
 '''
+# 671400kb	2732ms  pypy3
+#모든 경우의 수 순열을 생성하여 탐색
+
 from itertools import permutations
 n, M, h = map(int, input().split())
 
@@ -35,6 +38,8 @@ print(MAX)
 
 '''
 
+#	123776kb	3092ms  pypy3
+# 백트래킹을 이용하여 탐색
 import sys
 input = sys.stdin.readline
 
