@@ -2,17 +2,6 @@ def solution(board, skill):
     n, m = len(board), len(board[0])    
     
     maps = [[0 for _ in range(m+1)] for _ in range(n+1)]
-    # 누적합 기준으로 board 설정
-    for i in range(n):
-        for j in range(m-1, 0, -1):
-            board[i][j] -= board[i][j-1]
-    
-    for j in range(m):
-        for i in range(n-1, 0, -1):
-            board[i][j] -= board[i-1][j]
-    
-    for i in board:
-        print(i)
         
     for s in skill: 
         t, r1, c1, r2, c2, degree = s
@@ -21,12 +10,9 @@ def solution(board, skill):
             degree *= -1
 
         maps[r1][c1] += degree
-        maps[r2][c1+1] -= degree
+        maps[r2+1][c1] -= degree
         maps[r1][c2+1] -= degree
-        maps[r2+1][c2+1] -= degree
-            
-    for i in board:
-        print(i)
+        maps[r2+1][c2+1] += degree
     
     # 누적합 계산
     for i in range(n):
@@ -38,20 +24,12 @@ def solution(board, skill):
             maps[i][j] += maps[i-1][j]
             
     answer = 0
-    
-    # 누적합 표기 -> 직접 표기 변경
+
     for i in range(n):
-        for j in range(-1, m-1, -1):
-            board[i][j] -= board[i][j+1]
-    
-    for j in range(m):
-        for i in range(-1, n-1, -1):
-            board[i][j] -= board[i+1][j]
-    
-    #파괴되지 않은 건물 수 확인
-    answer = 0
-    for i in board :
-        answer += len([j for j in i if j > 0])    
+        for j in range(m):
+            if board[i][j] + maps[i][j] > 0 :
+                answer += 1
+
     return answer
 
 
