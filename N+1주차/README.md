@@ -9,3 +9,11 @@
 
 - 문자열과 점수 / DP / 백준 / Gold 3
  https://www.acmicpc.net/problem/2216
+ 
+ - 미친로봇 백준 1405번
+ https://www.acmicpc.net/problem/1405
+ 
+ - 카드정렬하기 백준 1715번
+ https://www.acmicpc.net/problem/1715
+ 
+ 
