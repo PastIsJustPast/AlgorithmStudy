@@ -4,7 +4,10 @@ python3 30948    916
 pypy3   149520   592
 '''
 
+
 class Dice:
+    # north_south 는 위를 보고 있는 숫자부터 시작해서 위아래 방향에 있는 숫자들을 관리하고
+    # east_west 는 오른쪽 왼쪽방향에 있는 숫자들을 관리함
     def __init__(self, x, y, upside, downside, eastside, westside, southside, northside, head):
         self.x = x
         self.y = y
@@ -26,6 +29,7 @@ class Dice:
         self.get_score(self.x, self.y, set())
         self.rotate_head()
 
+    # 움직이면 주사위가 돌아가는 부분
     def rotate_dice(self):
         if self.head % 2:
             self.east_west = self.east_west[-dy[self.head]:] + self.east_west[:-dy[self.head]]
@@ -34,6 +38,7 @@ class Dice:
             self.north_south = self.north_south[dx[self.head]:] + self.north_south[:dx[self.head]]
             self.east_west[0], self.east_west[2] = self.north_south[0], self.north_south[2]
 
+    # 움직이는 방향 바뀌는 부분
     def rotate_head(self):
         board_num = board[self.x][self.y]
         dice_num = self.north_south[2]
